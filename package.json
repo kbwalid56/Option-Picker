@@ -1,0 +1,17 @@
+{
+  "name": "option-picker",
+  "version": "1.0.0",
+  "description": "A bottle spin random option picker desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["option-picker", "random-picker"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^45.3.1"
+  }
+}

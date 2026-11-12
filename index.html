@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Option Picker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Option<span>Picker.</span></h1>
+            <p>Can't decide? Let fate choose.</p>
+        </header>
+
+
+        <main>
+
+            <!-- LEFT SIDE: OPTIONS -->
+            <section class="input-section">
+
+                <h2>Your Options</h2>
+
+                <p class="description">
+                    Add the choices you are confused about.
+                </p>
+
+                <!-- Input field -->
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="optionInput"
+                        placeholder="Enter an option..."
+                    >
+
+                    <button id="addBtn">
+                        Add +
+                    </button>
+
+                </div>
+
+                <!-- Options appear here -->
+                <div id="optionList" class="option-list"></div>
+
+                <!-- Option counter -->
+                <p id="optionCount">0 options added</p>
+
+            </section>
+
+
+            <!-- RIGHT SIDE: BOTTLE SPINNER -->
+            <section class="spinner-section">
+
+                <h2>Let fate decide!</h2>
+
+                <!-- Circular wheel -->
+                <div class="wheel-container" id="wheelContainer">
+
+                    <!-- Options arranged around the bottle -->
+                    <div id="wheelOptions"></div>
+
+                    <!-- Bottle in the center -->
+                    <div class="bottle" id="bottle">
+
+                        <div class="bottle-neck"></div>
+
+                        <div class="bottle-body">
+
+                            <div class="bottle-label">
+                                SPIN
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Spin button -->
+                <button id="spinBtn" class="spin-btn">
+                    SPIN THE BOTTLE
+                </button>
+
+
+                <!-- Reset button -->
+                <button id="resetBtn" class="reset-btn">
+                    Reset Options
+                </button>
+
+            </section>
+
+
+            <!-- RESULT SECTION -->
+            <section id="resultSection" class="result-section hidden">
+
+                <p class="result-label">
+                    THE CHOSEN ONE IS...
+                </p>
+
+                <h2 id="resultText"></h2>
+
+                <button id="spinAgainBtn">
+                    Spin Again
+                </button>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            Made for the indecisive minds.
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="renderer.js"></script>
+
+</body>
+
+</html>

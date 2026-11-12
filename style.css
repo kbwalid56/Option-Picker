@@ -1,0 +1,395 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #10101c;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+}
+
+header h1 span {
+    color: #a78bfa;
+}
+
+header p {
+    color: #9999ad;
+    margin-top: 8px;
+}
+
+/* Main layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Input section */
+.input-section,
+.spinner-section {
+    background: #1b1b2b;
+    border: 1px solid #303047;
+    border-radius: 18px;
+    padding: 28px;
+}
+
+h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #9999ad;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* Input */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    background: #10101c;
+    border: 1px solid #393950;
+    border-radius: 9px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #a78bfa;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 9px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+#addBtn {
+    padding: 0 20px;
+    background: #8b5cf6;
+    color: white;
+}
+
+#addBtn:hover:not(:disabled) {
+    background: #7c3aed;
+}
+
+/* Option list */
+.option-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #292941;
+    border: 1px solid #41415e;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+}
+
+.remove-btn {
+    color: #f87171;
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.remove-btn:hover {
+    color: #ef4444;
+}
+
+#optionCount {
+    color: #9999ad;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Spinner section */
+.spinner-section {
+    text-align: center;
+}
+
+.spinner-section h2 {
+    margin-bottom: 25px;
+}
+
+.bottle-container {
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 600px;
+}
+
+/* Bottle */
+.bottle {
+    width: 85px;
+    height: 170px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: center center;
+}
+
+.bottle-neck {
+    width: 32px;
+    height: 35px;
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #c4b5fd,
+        #7c3aed
+    );
+    border-radius: 6px 6px 2px 2px;
+    border: 2px solid #c4b5fd;
+}
+
+.bottle-body {
+    width: 85px;
+    height: 130px;
+    margin-top: -2px;
+    border-radius: 20px 20px 28px 28px;
+    background: linear-gradient(
+        100deg,
+        #6d28d9,
+        #c4b5fd,
+        #7c3aed
+    );
+    border: 2px solid #ddd6fe;
+    box-shadow: 0 0 30px #8b5cf655;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottle-label {
+    background: #201039;
+    color: #e9d5ff;
+    padding: 9px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Spin button */
+.spin-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #a78bfa
+    );
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.spin-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px #8b5cf655;
+}
+
+.reset-btn {
+    margin-top: 15px;
+    background: transparent;
+    color: #a5a5bd;
+    font-size: 13px;
+}
+
+.reset-btn:hover:not(:disabled) {
+    color: white;
+}
+
+/* Result section */
+.result-section {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    margin-top: 5px;
+    background: #29213d;
+    border: 1px solid #8b5cf6;
+    border-radius: 15px;
+}
+
+.result-label {
+    color: #c4b5fd;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.result-section h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin: 18px 0;
+    overflow-wrap: anywhere;
+}
+
+#spinAgainBtn {
+    background: #8b5cf6;
+    color: white;
+    padding: 12px 25px;
+}
+
+#spinAgainBtn:hover {
+    background: #7c3aed;
+}
+
+/* Hide result before spinning */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #77778e;
+    margin-top: 45px;
+    font-size: 12px;
+}
+
+/* Responsive layout */
+@media (max-width: 750px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+}
+
+/* Circular wheel layout */
+
+.wheel-container {
+    width: 420px;
+    height: 420px;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+#wheelOptions {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.wheel-option {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    min-width: 75px;
+    max-width: 110px;
+    padding: 11px 14px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    background: #29213d;
+    color: #ddd6fe;
+
+    border: 1px solid #8b5cf6;
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow: 0 0 12px #8b5cf622;
+
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.wheel-option.winner {
+    background: #8b5cf6;
+    color: white;
+
+    border-color: #ddd6fe;
+
+    box-shadow: 0 0 25px #a78bfa;
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* Center the bottle */
+
+.bottle {
+    position: absolute;
+
+    left: calc(50% - 42.5px);
+    top: calc(50% - 85px);
+
+    z-index: 2;
+
+    transform-origin: center center;
+
+    margin: 0;
+}
+
+/* Give the wheel some breathing room */
+
+.spinner-section {
+    overflow: visible;
+}
+
+@media (max-width: 500px) {
+
+    .wheel-container {
+        width: 340px;
+        height: 340px;
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin-bottom: -50px;
+    }
+
+}
