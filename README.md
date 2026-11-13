@@ -18,8 +18,8 @@ Simply enter your options, spin the virtual bottle, and let the app randomly sel
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 - Node.js
 - Electron.js
